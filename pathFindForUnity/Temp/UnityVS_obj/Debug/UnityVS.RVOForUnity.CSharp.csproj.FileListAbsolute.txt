@@ -1,0 +1,11 @@
+F:\aliyunSvn\trunk\RVOForUnity\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+F:\aliyunSvn\trunk\RVOForUnity\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+F:\aliyunSvn\trunk\RVOForUnity\Temp\UnityVS_bin\Debug\UnityEditor.dll
+F:\aliyunSvn\trunk\RVOForUnity\Temp\UnityVS_bin\Debug\UnityEngine.dll
+F:\aliyunSvn\trunk\RVOForUnity\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+F:\aliyunSvn\trunk\RVOForUnity\Temp\UnityVS_bin\Debug\UnityEditor.xml
+F:\aliyunSvn\trunk\RVOForUnity\Temp\UnityVS_bin\Debug\UnityEngine.xml
+F:\aliyunSvn\trunk\RVOForUnity\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+F:\aliyunSvn\trunk\RVOForUnity\Temp\UnityVS_obj\Debug\Assembly-CSharp.dll
+F:\aliyunSvn\trunk\RVOForUnity\Temp\UnityVS_obj\Debug\Assembly-CSharp.pdb
+F:\aliyunSvn\trunk\RVOForUnity\Temp\UnityVS_obj\Debug\UnityVS.RVOForUnity.CSharp.csprojResolveAssemblyReference.cache

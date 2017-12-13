@@ -1,0 +1,11 @@
+D:\OtakuSvn\Program\Other\ClientMiscellaneous2\RVOForUnity\obj\Debug\UnityVS.RVOForUnity.CSharp.csprojResolveAssemblyReference.cache
+D:\OtakuSvn\Program\Other\ClientMiscellaneous2\RVOForUnity\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+D:\OtakuSvn\Program\Other\ClientMiscellaneous2\RVOForUnity\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+D:\OtakuSvn\Program\Other\ClientMiscellaneous2\RVOForUnity\Temp\UnityVS_bin\Debug\UnityEditor.dll
+D:\OtakuSvn\Program\Other\ClientMiscellaneous2\RVOForUnity\Temp\UnityVS_bin\Debug\UnityEngine.dll
+D:\OtakuSvn\Program\Other\ClientMiscellaneous2\RVOForUnity\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+D:\OtakuSvn\Program\Other\ClientMiscellaneous2\RVOForUnity\Temp\UnityVS_bin\Debug\UnityEngine.xml
+D:\OtakuSvn\Program\Other\ClientMiscellaneous2\RVOForUnity\Temp\UnityVS_bin\Debug\UnityEditor.xml
+D:\OtakuSvn\Program\Other\ClientMiscellaneous2\RVOForUnity\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+D:\OtakuSvn\Program\Other\ClientMiscellaneous2\RVOForUnity\obj\Debug\Assembly-CSharp.dll
+D:\OtakuSvn\Program\Other\ClientMiscellaneous2\RVOForUnity\obj\Debug\Assembly-CSharp.pdb
