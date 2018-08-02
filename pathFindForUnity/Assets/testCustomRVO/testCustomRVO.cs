@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-class testCustomRVO : MonoBehaviour
+public class testCustomRVO : MonoBehaviour
 {
     CustomRVOMgr m_customRVOMgr = null;
 
