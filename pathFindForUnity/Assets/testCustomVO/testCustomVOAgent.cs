@@ -66,7 +66,7 @@ public class testCustomVOAgent : MonoBehaviour
         float cosTheta = Vector3.Dot(wantDir, obstacleDir);
 
         Vector3 finalSpeed = Vector3.zero;
-        if (cosTheta >= 0 && cosTheta < cosHalf)
+        if (cosTheta >= 0 && cosHalf < cosTheta)
         {
             // 处在夹角内
             float param1 = Vector3.Dot(wantDir * m_speed, (result.m_p1 - transform.position).normalized);
