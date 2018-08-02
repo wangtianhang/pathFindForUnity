@@ -61,7 +61,7 @@ public class testCustomVOAgent : MonoBehaviour
 //             // 处在夹角内
 //             Vector3 edge1 = (m_desPos - transform.position) - ;
 //         }
-        ThroughPointTangentWithCircleResult result = ThroughPointTangentWithCircle.Calculate(m_bPos, m_bRadius, transform.position);
+        ThroughPointTangentWithCircleResult result = ThroughPointTangentWithCircle.Calculate(m_bPos, m_bRadius + m_aRadius, transform.position);
         float cosHalf = Vector3.Dot(obstacleDir, (result.m_p1 - transform.position).normalized);
         float cosTheta = Vector3.Dot(wantDir, obstacleDir);
 
