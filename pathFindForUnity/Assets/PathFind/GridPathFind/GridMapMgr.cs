@@ -5,14 +5,14 @@ using System.Collections.Generic;
 
 namespace PathFind
 {
-    public class AstarMapCell
+    public class GridMapCell
     {
         public List<int> m_whoseArea = new List<int>();
     }
 
-    public class AstarMapMgr 
+    public class GridMapMgr 
     {
-        List<AstarMapCell> m_mapCellList = new List<AstarMapCell>();
+        List<GridMapCell> m_mapCellList = new List<GridMapCell>();
         public int MAP_LENGTH_X = 100;
         public int MAP_WIDTH_Z = 100;
 
@@ -27,8 +27,8 @@ namespace PathFind
             {
                 for (int j = 0; j < MAP_WIDTH_Z; ++j)
                 {
-                    AstarMapCell astarMapCell = new AstarMapCell();
-                    m_mapCellList.Add(astarMapCell);
+                    GridMapCell gridMapCell = new GridMapCell();
+                    m_mapCellList.Add(gridMapCell);
                 }
             }
         }
@@ -43,7 +43,6 @@ namespace PathFind
             }
             else
             {
-                //Vector2i posi = AstarBattleHelper.converVector3toVector2i(pos);
                 int index = posi.m_x * MAP_WIDTH_Z + posi.m_y;
                 return index;
             }
@@ -99,7 +98,7 @@ namespace PathFind
                 int index = GetIndex(outLineList[i]);
                 if (index >= 0 && index < m_mapCellList.Count)
                 {
-                    AstarMapCell cellInfo = m_mapCellList[index];
+                    GridMapCell cellInfo = m_mapCellList[index];
                     if (cellInfo.m_whoseArea.Count == 0)
                     {
                         //return true;
@@ -179,7 +178,7 @@ namespace PathFind
             UnityEngine.GameObject colliderPrefab = UnityEngine.Resources.Load("Barrier2") as UnityEngine.GameObject;
             for(int i = 0; i < m_mapCellList.Count; ++i)
             {
-                AstarMapCell iter = m_mapCellList[i];
+                GridMapCell iter = m_mapCellList[i];
                 if(iter.m_whoseArea.Count != 0)
                 {
                     Vector2i pos = ConvertIndexToPos(i);

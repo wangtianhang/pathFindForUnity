@@ -14,15 +14,15 @@ namespace PathFind
         Blocked,
     }
 
-    public class AstarResult
+    public class GridPathResult
     {
         public FindPathResult m_result = FindPathResult.None;
         public List<Vector2i> m_pathList = new List<Vector2i>();
     }
 
-    public class AstarPathFinder
+    public class GridPathFinder
     {
-        AstarMapMgr m_mapMgr = null;
+        GridMapMgr m_mapMgr = null;
 
         NodePool m_nodePool = null;
 
@@ -34,7 +34,7 @@ namespace PathFind
         public int NEAREST_POS_SEARCH_RADIUS = 5;
         public int PATH_MAX_NODE = 3;
 
-        public void Init(int pathSearchNodeMax, AstarMapMgr mapMgr)
+        public void Init(int pathSearchNodeMax, GridMapMgr mapMgr)
         {
             m_mapMgr = mapMgr;
 
@@ -47,9 +47,9 @@ namespace PathFind
             m_close_list.Capacity = m_mapMgr.MAP_WIDTH_Z * m_mapMgr.MAP_LENGTH_X;
         }
 
-        public AstarResult AstarFind(PathFindAgent agent, Vector2i srcPos, Vector2i desPos)
+        public GridPathResult GridAstarFind(PathFindAgent agent, Vector2i srcPos, Vector2i desPos)
         {
-            AstarResult ret = new AstarResult();
+            GridPathResult ret = new GridPathResult();
 
             ClearNode();
 
@@ -192,7 +192,6 @@ namespace PathFind
         bool computeNearestFreePos(Vector2i scrPos, Vector2i final_pos, PathFindAgent agent, out Vector2i nearest_free_pos)
         {
             nearest_free_pos = new Vector2i(0, 0);
-            //ModuleAstarBattle astarBattleModule = SingletonMgr.GetModuleMgr().GetModuleBattle();
             bool has_found = false;
             float nearest_distance = 1000000;
             for (int i = -NEAREST_POS_SEARCH_RADIUS; i <= NEAREST_POS_SEARCH_RADIUS; ++i)

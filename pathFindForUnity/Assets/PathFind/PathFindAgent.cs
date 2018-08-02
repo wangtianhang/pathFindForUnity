@@ -81,7 +81,7 @@ namespace PathFind
             Vector2i srcPos = new Vector2i((int)curPos.x, (int)curPos.y);
             Vector2i desPos = new Vector2i((int)m_desPos.x, (int)m_desPos.y);
             m_pathList.Clear();
-            AstarResult result = m_mgr.GetPathFinder().AstarFind(this, srcPos, desPos);
+            GridPathResult result = m_mgr.GetPathFinder().GridAstarFind(this, srcPos, desPos);
             //if(result != null)
             {
                 if(result.m_result == FindPathResult.OnTheWay)
@@ -122,7 +122,7 @@ namespace PathFind
 //                         Common.Vector2 curPos = GetCurPos();
 //                         Vector2i srcPos = new Vector2i((int)curPos.x, (int)curPos.y);
 //                         Vector2i desPos = new Vector2i((int)m_desPos.x, (int)m_desPos.y);
-//                         AstarResult result = m_mgr.GetPathFinder().AstarFind(this, srcPos, desPos);
+//                         GridPathResult result = m_mgr.GetPathFinder().GridAstarFind(this, srcPos, desPos);
 //                         //if(result != null)
 //                         if(result.m_result == FindPathResult.OnTheWay)
 //                         {
@@ -163,7 +163,7 @@ namespace PathFind
                     Common.Vector2 curPos = GetCurPos();
                     Vector2i srcPos = new Vector2i((int)curPos.x, (int)curPos.y);
                     Vector2i desPos = new Vector2i((int)m_desPos.x, (int)m_desPos.y);
-                    AstarResult result = m_mgr.GetPathFinder().AstarFind(this, srcPos, desPos);
+                    GridPathResult result = m_mgr.GetPathFinder().GridAstarFind(this, srcPos, desPos);
                     //if(result != null)
                     if (result.m_result == FindPathResult.OnTheWay)
                     {

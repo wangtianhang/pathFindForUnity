@@ -35,8 +35,8 @@ namespace PathFind
         int m_agendIdGenerator = 0;
         Dictionary<int, PathFindAgent> m_agentDic = new Dictionary<int, PathFindAgent>();
 
-        AstarMapMgr m_mapMgr = null;
-        AstarPathFinder m_pathFinder = null;
+        GridMapMgr m_mapMgr = null;
+        GridPathFinder m_pathFinder = null;
 
         public void Init(float oneStep, float maxUnitSize)
         {
@@ -48,9 +48,9 @@ namespace PathFind
             /* Specify the global time step of the simulation. */
             RVO.Simulator.Instance.setTimeStep(m_oneStep);
 
-            m_mapMgr = new AstarMapMgr();
+            m_mapMgr = new GridMapMgr();
 
-            m_pathFinder = new AstarPathFinder();
+            m_pathFinder = new GridPathFinder();
         }
 
         public void LoadMap()
@@ -59,7 +59,7 @@ namespace PathFind
 
             m_pathFinder.Init(1000, m_mapMgr);
 
-            // todo 初始化astar地图碰撞
+            // todo 初始化grid地图碰撞
             m_agendIdGenerator += 1;
             UnityEngine.GameObject obstacleGo = UnityEngine.GameObject.Find("Obstacle");
             UnityEngine.GameObject obstaclePrefab = UnityEngine.Resources.Load("Barrier") as UnityEngine.GameObject;
@@ -95,12 +95,12 @@ namespace PathFind
             RVO.Simulator.Instance.processObstacles();
         }
 
-        public AstarMapMgr GetMapMgr()
+        public GridMapMgr GetMapMgr()
         {
             return m_mapMgr;
         }
 
-        public AstarPathFinder GetPathFinder()
+        public GridPathFinder GetPathFinder()
         {
             return m_pathFinder;
         }
