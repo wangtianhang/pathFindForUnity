@@ -83,7 +83,7 @@ class test3 : MonoBehaviour
     {
         GameObject prefab = Resources.Load("testCustomRVOAgent") as GameObject;
 
-        for (int i = -30; i <= 30; i++)
+        for (int i = -1; i <= 1; i++)
         {
             for (int j = -1; j <= 1; ++j)
             {
