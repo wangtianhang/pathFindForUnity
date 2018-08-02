@@ -83,9 +83,9 @@ class test3 : MonoBehaviour
     {
         GameObject prefab = Resources.Load("testCustomRVOAgent") as GameObject;
 
-        for (int i = -1; i <= 1; i++)
+        for (int i = 0; i <= 0; i++)
         {
-            for (int j = -1; j <= 1; ++j)
+            for (int j = 0; j <= 0; ++j)
             {
                 int id = RVO.Simulator.Instance.addAgent(new RVO.Vector2(i, j), 10, 10, 10, 10, 0.5f, 1, new RVO.Vector2(0, 0));
 

@@ -71,7 +71,7 @@ public class Unit : MonoBehaviour
     public void OnRenderUpdate(float delta)
     {
         m_renderPosAccTimer += delta;
-        float weight = m_renderPosAccTimer / testPathFinder1.OneFrameSpan;
+        float weight = m_renderPosAccTimer / testGridPathFinder1.OneFrameSpan;
         Vector3 curRenderPos = Vector3.Lerp(m_renderSrcPos, m_renderDesPos, weight);
         gameObject.transform.position = curRenderPos;
     }

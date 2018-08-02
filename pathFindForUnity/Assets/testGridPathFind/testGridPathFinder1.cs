@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class testPathFinder1 : MonoBehaviour {
+public class testGridPathFinder1 : MonoBehaviour
+{
 
     List<Unit> m_unitList = new List<Unit>();
     public const float OneFrameSpan = 1 / (float)10;
