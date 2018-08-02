@@ -66,11 +66,11 @@ public class CustomRVOAgent : MonoBehaviour
                     {
                         continue;
                     }
-                    Vector3 rvoDistance = transform.position - iter.Value.transform.position;
+                    Vector3 rvoDistance = wantPos - iter.Value.transform.position;
                     if(rvoDistance.magnitude < 1)
                     {
                         hasCollision = true;
-                        Vector3 avoidAgentDir = iter.Value.transform.position - transform.position;
+                        Vector3 avoidAgentDir = iter.Value.transform.position - wantPos;
                         Vector3 avoidDir = Vector3.zero;
                         if(Vector3.Cross(dir, avoidAgentDir).y >= 0)
                         {
@@ -97,8 +97,40 @@ public class CustomRVOAgent : MonoBehaviour
             while (m_avoidQueue.Count != 0)
             {
                 AvoidRequest avoidCmd = m_avoidQueue.Dequeue();
-                Vector3 avoidDeltaPos = avoidCmd.m_dir * m_speed * delta;
-                transform.position += avoidDeltaPos;
+                Vector3 dir = avoidCmd.m_dir;
+                Vector3 wantPos = transform.position + avoidCmd.m_dir * m_speed * delta;
+
+                bool hasCollision = false;
+                foreach (var iter in m_mgr.m_agentDic)
+                {
+                    if (iter.Value == this)
+                    {
+                        continue;
+                    }
+                    Vector3 rvoDistance = wantPos - iter.Value.transform.position;
+                    if (rvoDistance.magnitude < 1)
+                    {
+                        hasCollision = true;
+                        Vector3 avoidAgentDir = iter.Value.transform.position - wantPos;
+                        Vector3 avoidDir = Vector3.zero;
+                        if (Vector3.Cross(dir, avoidAgentDir).y >= 0)
+                        {
+                            // 在前进方向的右边
+                            avoidDir = Vector3.Cross(Vector3.up, dir);
+                        }
+                        else
+                        {
+                            // 在前进方向的左边
+                            avoidDir = Vector3.Cross(dir, avoidDir);
+                        }
+                        AvoidRequest avoidRequest = new AvoidRequest(avoidDir);
+                        iter.Value.m_avoidQueue.Enqueue(avoidRequest);
+                    }
+                }
+                if (!hasCollision)
+                {
+                    transform.position = wantPos;
+                }
             }
         }
     }
